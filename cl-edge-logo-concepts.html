@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CL Edge Consultant · Logo Concepts</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Outfit:wght@300;400;500;600;700&family=DM+Mono:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=Space+Grotesk:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0e0f14;
+  --paper: #f6f5f2;
+  --cream: #eceae3;
+  --mid: #787570;
+  --gold: #c4924a;
+  --gold2: #e8b97a;
+  --ai: #3b6fe0;
+  --forest: #1a3330;
+  --line: rgba(14,15,20,0.1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: #f0ede6; color: var(--ink); font-family: 'Outfit', sans-serif; font-size: 15px; line-height: 1.6; }
+
+header {
+  padding: 56px 56px 40px;
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+.header-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px; letter-spacing: .25em; text-transform: uppercase;
+  color: var(--ai); margin-bottom: 12px;
+  display: flex; align-items: center; gap: 10px;
+}
+.header-label::before { content: ''; width: 24px; height: 1px; background: var(--ai); }
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 44px); font-weight: 500;
+  letter-spacing: -.02em; margin-bottom: 10px;
+}
+header p { font-size: 15px; color: var(--mid); max-width: 560px; line-height: 1.7; }
+
+.note {
+  background: rgba(59,111,224,.06);
+  border-left: 2px solid var(--ai);
+  padding: 14px 20px;
+  margin: 32px 56px 0;
+  font-size: 13px; color: var(--mid); line-height: 1.6;
+}
+.note strong { color: var(--ink); }
+
+main { padding: 56px 56px 80px; }
+main h2 {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: .25em; text-transform: uppercase;
+  color: var(--mid); margin-bottom: 36px;
+  display: flex; align-items: center; gap: 12px;
+}
+main h2::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+/* ── CONCEPT CARD ── */
+.concept-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.concept-number {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--mid); padding: 16px 24px 0;
+}
+
+.concept-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px; font-weight: 500;
+  padding: 6px 24px 0; color: var(--ink);
+}
+
+.concept-rationale {
+  font-size: 12px; color: var(--mid);
+  padding: 8px 24px 20px;
+  line-height: 1.65;
+  border-bottom: 1px solid var(--line);
+}
+
+/* Logo display area — light bg */
+.logo-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 52px 40px;
+  background: var(--paper);
+  min-height: 180px;
+}
+
+/* Logo display area — dark bg */
+.logo-display.dark {
+  background: var(--ink);
+}
+.logo-display.forest {
+  background: var(--forest);
+}
+.logo-display.mid {
+  background: #1c1e26;
+}
+
+.bg-toggle {
+  display: flex;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+.bg-btn {
+  flex: 1; padding: 10px 8px;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: .15em; text-transform: uppercase;
+  cursor: pointer; border: none; background: var(--cream);
+  color: var(--mid); transition: background .2s, color .2s;
+  border-right: 1px solid var(--line);
+}
+.bg-btn:last-child { border-right: none; }
+.bg-btn.active { background: var(--ink); color: var(--paper); }
+.bg-btn:hover:not(.active) { background: var(--line); }
+
+/* ═══════════════════════════════════
+   LOGO 1 — Wordmark + edge mark
+   ═══════════════════════════════════ */
+.logo-1 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  user-select: none;
+}
+.logo-1-mark {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+}
+.logo-1-mark svg { width: 100%; height: 100%; }
+.logo-1-text {}
+.logo-1-cl {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  line-height: 1;
+  color: var(--ink);
+}
+.logo-1-cl .slash { color: var(--gold); font-style: italic; font-weight: 400; }
+.logo-1-edge {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-top: 3px;
+}
+/* dark variants */
+.dark .logo-1-cl { color: var(--paper); }
+.dark .logo-1-edge { color: rgba(246,245,242,.4); }
+.forest .logo-1-cl { color: var(--paper); }
+.forest .logo-1-edge { color: rgba(246,245,242,.4); }
+.mid .logo-1-cl { color: var(--paper); }
+.mid .logo-1-edge { color: rgba(246,245,242,.4); }
+
+/* ═══════════════════════════════════
+   LOGO 2 — Geometric CL monogram
+   ═══════════════════════════════════ */
+.logo-2 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  user-select: none;
+}
+.logo-2-mark {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+.logo-2-mark svg { width: 100%; height: 100%; }
+.logo-2-right {}
+.logo-2-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+  color: var(--ink);
+  line-height: 1;
+}
+.logo-2-name .edge { color: var(--gold); }
+.logo-2-sub {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-top: 4px;
+}
+.dark .logo-2-name { color: var(--paper); }
+.dark .logo-2-sub  { color: rgba(246,245,242,.35); }
+.forest .logo-2-name { color: var(--paper); }
+.forest .logo-2-sub  { color: rgba(246,245,242,.35); }
+.mid .logo-2-name { color: var(--paper); }
+.mid .logo-2-sub  { color: rgba(246,245,242,.35); }
+
+/* ═══════════════════════════════════
+   LOGO 3 — Editorial serif stacked
+   ═══════════════════════════════════ */
+.logo-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  user-select: none;
+}
+.logo-3-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-3-cl {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 44px;
+  font-weight: 600;
+  letter-spacing: -.03em;
+  line-height: 1;
+  color: var(--ink);
+}
+.logo-3-divider {
+  width: 1px;
+  height: 32px;
+  background: var(--gold);
+  opacity: .7;
+}
+.logo-3-edge-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.logo-3-edge-word {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  line-height: 1.2;
+}
+.logo-3-bottom {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-top: 6px;
+}
+.dark .logo-3-cl { color: var(--paper); }
+.dark .logo-3-bottom { color: rgba(246,245,242,.3); }
+.forest .logo-3-cl { color: var(--paper); }
+.forest .logo-3-bottom { color: rgba(246,245,242,.3); }
+.mid .logo-3-cl { color: var(--paper); }
+.mid .logo-3-bottom { color: rgba(246,245,242,.3); }
+
+/* ═══════════════════════════════════
+   LOGO 4 — Node/AI circuit mark
+   ═══════════════════════════════════ */
+.logo-4 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  user-select: none;
+}
+.logo-4-mark {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+}
+.logo-4-mark svg { width: 100%; height: 100%; }
+.logo-4-text {}
+.logo-4-cl {
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1;
+  color: var(--ink);
+}
+.logo-4-cl em {
+  font-style: italic;
+  color: var(--ai);
+  font-weight: 300;
+}
+.logo-4-sub {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-top: 4px;
+}
+.dark .logo-4-cl { color: var(--paper); }
+.dark .logo-4-sub  { color: rgba(246,245,242,.35); }
+.forest .logo-4-cl { color: var(--paper); }
+.forest .logo-4-sub  { color: rgba(246,245,242,.35); }
+.mid .logo-4-cl { color: var(--paper); }
+.mid .logo-4-sub  { color: rgba(246,245,242,.35); }
+
+/* ═══════════════════════════════════
+   LOGO 5 — Minimal bracket mark
+   ═══════════════════════════════════ */
+.logo-5 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  user-select: none;
+}
+.logo-5-mark {
+  position: relative;
+  width: 38px; height: 44px;
+  flex-shrink: 0;
+}
+.logo-5-mark svg { width: 100%; height: 100%; }
+.logo-5-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  line-height: 1;
+  color: var(--ink);
+}
+.logo-5-name .edge { color: var(--gold); font-weight: 300; }
+.logo-5-sub {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-top: 4px;
+}
+.dark .logo-5-name { color: var(--paper); }
+.dark .logo-5-sub  { color: rgba(246,245,242,.35); }
+.forest .logo-5-name { color: var(--paper); }
+.forest .logo-5-sub  { color: rgba(246,245,242,.35); }
+.mid .logo-5-name { color: var(--paper); }
+.mid .logo-5-sub  { color: rgba(246,245,242,.35); }
+
+/* full width card */
+.concept-card.full { grid-column: 1 / -1; }
+.concept-card.full .logo-display { padding: 60px 80px; }
+
+/* ═══════════════════════════════════
+   LOGO 6 — Compact icon-only (favicon)
+   ═══════════════════════════════════ */
+.favicon-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 32px 40px;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+.fav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.fav-size {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: .1em;
+  color: var(--mid);
+}
+
+@media(max-width: 768px) {
+  header, .note, main { padding-left: 24px; padding-right: 24px; }
+  .logo-grid { grid-template-columns: 1fr; }
+  .concept-card.full { grid-column: 1; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-label">CL Edge Consultant · Brand Identity</div>
+  <h1>Logo Concepts</h1>
+  <p>Five distinct directions, each aligned with the website's visual identity — the Playfair/Outfit type system, gold/navy/dark palette, and AI + enterprise positioning. Toggle light/dark backgrounds to see each in context.</p>
+</header>
+
+<div class="note">
+  <strong>How to read these:</strong> Each concept has a different strategic personality — from editorial and authoritative to technical and AI-forward. The toggle buttons let you preview each logo on light, dark-forest, and dark-navy backgrounds, matching the website's actual sections.
+</div>
+
+<main>
+  <h2>Logo directions</h2>
+
+  <div class="logo-grid">
+
+    <!-- ── CONCEPT 1 ── -->
+    <div class="concept-card">
+      <div class="concept-number">Concept 01</div>
+      <div class="concept-name">The Edge Mark</div>
+      <div class="concept-rationale">A geometric diamond/arrow mark — referencing both a sharp "edge" and a forward direction. Paired with a serif CL and mono-spaced tagline. Authoritative, consulting-firm feel with a subtle technical accent.</div>
+      <div class="logo-display" id="display-1">
+        <div class="logo-1">
+          <div class="logo-1-mark">
+            <svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Diamond/arrow composite -->
+              <polygon points="21,2 40,21 21,40 2,21" fill="none" stroke="#c4924a" stroke-width="1.5"/>
+              <polygon points="21,8 34,21 21,34 8,21" fill="#c4924a" opacity="0.12"/>
+              <!-- inner arrow right -->
+              <polyline points="14,21 24,14 24,28 14,21" fill="#c4924a" opacity="0.9"/>
+            </svg>
+          </div>
+          <div class="logo-1-text">
+            <div class="logo-1-cl">CL<span class="slash"> /</span></div>
+            <div class="logo-1-edge">Edge · Consultant</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-toggle">
+        <button class="bg-btn active" onclick="setTheme(1,'light',this)">Light</button>
+        <button class="bg-btn" onclick="setTheme(1,'forest',this)">Forest</button>
+        <button class="bg-btn" onclick="setTheme(1,'dark',this)">Dark</button>
+      </div>
+    </div>
+
+    <!-- ── CONCEPT 2 ── -->
+    <div class="concept-card">
+      <div class="concept-number">Concept 02</div>
+      <div class="concept-name">The Monogram Block</div>
+      <div class="concept-rationale">A constructed CL lettermark inside a square frame — clean, geometric, scalable. The "L" doubles as a structural angle, echoing frameworks and process diagrams. Modern, professional, versatile across digital and print.</div>
+      <div class="logo-display" id="display-2">
+        <div class="logo-2">
+          <div class="logo-2-mark">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="46" height="46" rx="4" fill="none" stroke="#c4924a" stroke-width="1.5"/>
+              <rect x="1" y="1" width="46" height="46" rx="4" fill="#c4924a" opacity="0.07"/>
+              <!-- C shape -->
+              <path d="M29 14 C29 14 16 14 16 24 C16 34 29 34 29 34" stroke="#0e0f14" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <!-- L shape -->
+              <polyline points="33,14 33,34 40,34" stroke="#c4924a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </div>
+          <div class="logo-2-right">
+            <div class="logo-2-name">CL <span class="edge">Edge</span></div>
+            <div class="logo-2-sub">Consultant</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-toggle">
+        <button class="bg-btn active" onclick="setTheme(2,'light',this)">Light</button>
+        <button class="bg-btn" onclick="setTheme(2,'forest',this)">Forest</button>
+        <button class="bg-btn" onclick="setTheme(2,'dark',this)">Dark</button>
+      </div>
+    </div>
+
+    <!-- ── CONCEPT 3 ── -->
+    <div class="concept-card">
+      <div class="concept-number">Concept 03</div>
+      <div class="concept-name">The Editorial Stack</div>
+      <div class="concept-rationale">Pure typography — a large serif CL split by a gold vertical rule, with "Edge" and "Consultant" as mono labels. No icon needed. Inspired by editorial mastheads and financial consultancy identities. The most premium feel of the set.</div>
+      <div class="logo-display" id="display-3">
+        <div class="logo-3">
+          <div class="logo-3-top">
+            <div class="logo-3-cl">CL</div>
+            <div class="logo-3-divider"></div>
+            <div class="logo-3-edge-block">
+              <div class="logo-3-edge-word">Edge</div>
+              <div class="logo-3-edge-word" style="color: var(--mid); font-size:8px; letter-spacing:.18em;">Consultant</div>
+            </div>
+          </div>
+          <div class="logo-3-bottom">AI Strategy &amp; Enterprise Consulting · France</div>
+        </div>
+      </div>
+      <div class="bg-toggle">
+        <button class="bg-btn active" onclick="setTheme(3,'light',this)">Light</button>
+        <button class="bg-btn" onclick="setTheme(3,'forest',this)">Forest</button>
+        <button class="bg-btn" onclick="setTheme(3,'dark',this)">Dark</button>
+      </div>
+    </div>
+
+    <!-- ── CONCEPT 4 ── -->
+    <div class="concept-card">
+      <div class="concept-number">Concept 04</div>
+      <div class="concept-name">The Agent Node</div>
+      <div class="concept-rationale">An abstract node/network mark — three connected dots forming a triangle, referencing multi-agent AI orchestration. The AI blue anchors the mark while gold accents tie it to the brand palette. Most explicitly tech/AI of the five concepts.</div>
+      <div class="logo-display" id="display-4">
+        <div class="logo-4">
+          <div class="logo-4-mark">
+            <svg viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- connecting lines first (behind nodes) -->
+              <line x1="23" y1="7" x2="39" y2="35" stroke="#3b6fe0" stroke-width="1.2" opacity="0.4"/>
+              <line x1="23" y1="7" x2="7" y2="35" stroke="#c4924a" stroke-width="1.2" opacity="0.4"/>
+              <line x1="7" y1="35" x2="39" y2="35" stroke="#3b6fe0" stroke-width="1.2" opacity="0.25"/>
+              <!-- nodes -->
+              <circle cx="23" cy="7" r="4.5" fill="#3b6fe0"/>
+              <circle cx="39" cy="35" r="4.5" fill="#3b6fe0" opacity="0.6"/>
+              <circle cx="7" cy="35" r="4.5" fill="#c4924a"/>
+              <!-- centre dot -->
+              <circle cx="23" cy="26" r="2" fill="#3b6fe0" opacity="0.3"/>
+            </svg>
+          </div>
+          <div class="logo-4-text">
+            <div class="logo-4-cl">CL<em>Edge</em></div>
+            <div class="logo-4-sub">AI Strategy · Consultant</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-toggle">
+        <button class="bg-btn active" onclick="setTheme(4,'light',this)">Light</button>
+        <button class="bg-btn" onclick="setTheme(4,'forest',this)">Forest</button>
+        <button class="bg-btn" onclick="setTheme(4,'dark',this)">Dark</button>
+      </div>
+    </div>
+
+    <!-- ── CONCEPT 5 — Full width ── -->
+    <div class="concept-card full">
+      <div class="concept-number">Concept 05</div>
+      <div class="concept-name">The Bracket Mark</div>
+      <div class="concept-rationale">A pair of code/logic brackets enclosing the initials — referencing both strategic framing ("holding" a problem) and technical fluency. The brackets are gold; the letterforms inside are ink. Minimal, clever, works at any size. A strong favicon candidate.</div>
+      <div class="logo-display" id="display-5">
+        <div class="logo-5">
+          <div class="logo-5-mark">
+            <svg viewBox="0 0 38 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- left bracket -->
+              <path d="M14 4 L6 4 L6 40 L14 40" stroke="#c4924a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <!-- right bracket -->
+              <path d="M24 4 L32 4 L32 40 L24 40" stroke="#c4924a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <!-- CL letters -->
+              <text x="19" y="28" font-family="'Playfair Display', serif" font-size="15" font-weight="700" fill="#0e0f14" text-anchor="middle">CL</text>
+            </svg>
+          </div>
+          <div>
+            <div class="logo-5-name">CL <span class="edge">Edge</span> Consultant</div>
+            <div class="logo-5-sub">AI Strategy · Agentic Systems · France</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Favicon previews -->
+      <div class="favicon-row">
+        <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);margin-right:8px;">Favicon sizes →</span>
+        <div class="fav-item">
+          <svg width="64" height="64" viewBox="0 0 38 44" fill="none"><path d="M14 4 L6 4 L6 40 L14 40" stroke="#c4924a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 4 L32 4 L32 40 L24 40" stroke="#c4924a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="19" y="28" font-family="serif" font-size="15" font-weight="700" fill="#0e0f14" text-anchor="middle">CL</text></svg>
+          <span class="fav-size">64px</span>
+        </div>
+        <div class="fav-item">
+          <svg width="32" height="32" viewBox="0 0 38 44" fill="none"><path d="M14 4 L6 4 L6 40 L14 40" stroke="#c4924a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 4 L32 4 L32 40 L24 40" stroke="#c4924a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="19" y="28" font-family="serif" font-size="15" font-weight="700" fill="#0e0f14" text-anchor="middle">CL</text></svg>
+          <span class="fav-size">32px</span>
+        </div>
+        <div class="fav-item">
+          <svg width="16" height="16" viewBox="0 0 38 44" fill="none"><path d="M14 4 L6 4 L6 40 L14 40" stroke="#c4924a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 4 L32 4 L32 40 L24 40" stroke="#c4924a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="19" y="28" font-family="serif" font-size="15" font-weight="700" fill="#0e0f14" text-anchor="middle">CL</text></svg>
+          <span class="fav-size">16px</span>
+        </div>
+        <div class="fav-item" style="background:var(--ink);padding:6px;border-radius:4px;">
+          <svg width="32" height="32" viewBox="0 0 38 44" fill="none"><path d="M14 4 L6 4 L6 40 L14 40" stroke="#c4924a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 4 L32 4 L32 40 L24 40" stroke="#c4924a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="19" y="28" font-family="serif" font-size="15" font-weight="700" fill="#f6f5f2" text-anchor="middle">CL</text></svg>
+          <span class="fav-size" style="color:rgba(246,245,242,.4);">dark</span>
+        </div>
+      </div>
+
+      <div class="bg-toggle">
+        <button class="bg-btn active" onclick="setTheme(5,'light',this)">Light</button>
+        <button class="bg-btn" onclick="setTheme(5,'forest',this)">Forest</button>
+        <button class="bg-btn" onclick="setTheme(5,'dark',this)">Dark</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DECISION GUIDE -->
+  <h2>Choosing a direction</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+    <div style="background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:24px;">
+      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ai);margin-bottom:10px;">If you want…</div>
+      <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:500;margin-bottom:8px;">Premium &amp; authoritative</div>
+      <div style="font-size:13px;color:var(--mid);line-height:1.65;">A logo that signals senior, established expertise. Feels like a top-tier consultancy.</div>
+      <div style="margin-top:14px;font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);">→ Concept 01 or 03</div>
+    </div>
+    <div style="background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:24px;">
+      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ai);margin-bottom:10px;">If you want…</div>
+      <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:500;margin-bottom:8px;">Modern &amp; versatile</div>
+      <div style="font-size:13px;color:var(--mid);line-height:1.65;">A logo that works everywhere — nav bar, business card, LinkedIn, email signature. Clean and contemporary.</div>
+      <div style="margin-top:14px;font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);">→ Concept 02 or 05</div>
+    </div>
+    <div style="background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:24px;">
+      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ai);margin-bottom:10px;">If you want…</div>
+      <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:500;margin-bottom:8px;">AI-forward signal</div>
+      <div style="font-size:13px;color:var(--mid);line-height:1.65;">A logo that immediately communicates technical and AI expertise, not just consulting pedigree.</div>
+      <div style="margin-top:14px;font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);">→ Concept 04</div>
+    </div>
+  </div>
+
+</main>
+
+<script>
+const themeMap = { light: '', forest: 'forest', dark: 'dark' };
+
+function setTheme(num, theme, btn) {
+  const display = document.getElementById('display-' + num);
+  // remove all theme classes
+  display.classList.remove('dark', 'forest', 'mid');
+  if (theme !== 'light') display.classList.add(themeMap[theme]);
+
+  // update active button
+  btn.closest('.bg-toggle').querySelectorAll('.bg-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  // swap SVG stroke/fill colors for dark bg logos
+  const isDark = theme !== 'light';
+  // logo 2 C letter stroke
+  if (num === 2) {
+    const cPath = display.querySelector('.logo-2-mark path');
+    if (cPath) cPath.setAttribute('stroke', isDark ? '#f6f5f2' : '#0e0f14');
+  }
+  if (num === 5) {
+    const textEl = display.querySelector('.logo-5-mark text');
+    if (textEl) textEl.setAttribute('fill', isDark ? '#f6f5f2' : '#0e0f14');
+  }
+  if (num === 1) {
+    const innerArrow = display.querySelectorAll('.logo-1-mark polygon')[1];
+    const arrowEl = display.querySelector('.logo-1-mark polyline');
+  }
+}
+</script>
+</body>
+</html>
